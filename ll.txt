@@ -1,0 +1,1 @@
+cmd /V:ON /s /c @echo off && set url=%1 && for /f "tokens=1,2,3 delims=:/ " %%a in ("!url!") do set protocol=%%a&set host=%%b&set port=%%c && start "" "%%ProgramFiles(x86)%%\Mobatek\MobaXterm\MobaXterm.exe" -newtab "ssh -p !port! !host!"
